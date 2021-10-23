@@ -1,5 +1,5 @@
 import { heroes } from '../data/heroes'
 
-const getHeroesById = (id) => heroes.filter((hero) => hero.id === id)
+const getHeroById = (id) => heroes.find((hero) => hero.id === id)
 
-export default getHeroesById
+export default getHeroById
