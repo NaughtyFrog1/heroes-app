@@ -38,7 +38,7 @@ const HeroCard = ({
                 className="btn btn-sm btn-outline-primary me-auto"
                 to={`./hero/${id}`}
               >
-                Ver Más
+                See more
               </Link>
             </div>
           </div>
