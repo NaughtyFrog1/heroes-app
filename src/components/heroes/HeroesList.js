@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import getHeroesByPublisher from '../../selectors/getHeroesByPublisher'
 import HeroCard from './HeroCard'
 
 const HeroesList = ({ publisher }) => {
-  const heroes = getHeroesByPublisher(publisher)
+  // getHeroesByPublisher(...) se dispara solo cuando cambia el publisher
+  const heroes = useMemo(() => getHeroesByPublisher(publisher), [publisher])
+
   return (
     <div className="row row-cols-auto">
       {heroes.map((hero) => (
