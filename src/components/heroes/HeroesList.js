@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import getHeroesByPublisher from '../../selectors/getHeroesByPublisher'
 import HeroCard from './HeroCard'
 
