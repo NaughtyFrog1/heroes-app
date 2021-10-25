@@ -11,12 +11,13 @@ const HeroCard = ({
   characters,
 }) => {
   return (
-    <div className="card" style={{ maxWidth: '400px' }}>
-      <div className="row g-0">
+    <div className="card h-100 shadow" style={{ maxWidth: '400px' }}>
+      <div className="row g-0 h-100">
         <div className="col-md-4">
           <img
             src={`./assets/heroes/${id}.jpg`}
-            className="card-img-top"
+            style={{objectFit: 'cover', objectPosition: 'center center'}}
+            className="card-img-top h-100"
             alt={superhero}
           />
         </div>
