@@ -25,6 +25,7 @@ export const Navbar = () => {
           <ul className="navbar-nav">
             <NavbarItem to="/marvel">Marvel</NavbarItem>
             <NavbarItem to="/dc">DC</NavbarItem>
+            <NavbarItem to="/search">Search</NavbarItem>
           </ul>
           <ul className="navbar-nav ms-auto">
             <NavbarItem to="/login">Logout</NavbarItem>
