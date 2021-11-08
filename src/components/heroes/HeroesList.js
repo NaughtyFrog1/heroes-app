@@ -9,8 +9,8 @@ const HeroesList = ({ publisher }) => {
   return (
     <div className="row row-cols-auto g-4 mb-5 justify-content-center animate__animated animate__fadeIn">
       {heroes.map((hero) => (
-        <div className="col">
-          <HeroCard key={hero.id} {...hero} />
+        <div className="col" key={hero.id}>
+          <HeroCard {...hero} />
         </div>
       ))}
     </div>

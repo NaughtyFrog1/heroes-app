@@ -51,7 +51,7 @@ const SearchScreen = ({ history }) => {
 
         <div className="row row-cols-auto g-4 mb-5 justify-content-center animate__animated animate__fadeIn">
           {heroesFiltered.map((hero) => (
-            <div className="col">
+            <div className="col" key={hero.id}>
               <HeroCard key={hero.id} {...hero} />
             </div>
           ))}
