@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import AuthContext from '../../auth/AuthContext'
+import types from '../../types/types'
 
-const LoginScreen = ({ history }) => {  // 1.
+const LoginScreen = ({ history }) => {
+  const { dispatch } = useContext(AuthContext)
+  
   const handleClickLogin = () => {
-    history.replace('/') // 2.
+    dispatch({ type: types.login, payload: { name: 'Manuel' } })
+    history.replace('/') // 1. 2.
   }
 
   return (
@@ -20,9 +25,9 @@ export default LoginScreen
 
 /**
  * 1. El componente tiene varias props incrustadas por defecto por react-router,
- * history es una de ellas. Podemos verlas desde la vista de componentes en 
+ * history es una de ellas. Podemos verlas desde la vista de componentes en
  * chrome
- * 
+ *
  * 2. Con `history.replace(url)' reemplazamos la entrada en el historial de la
  * pestaña, haciendo que no se pueda volver para atras.
  */

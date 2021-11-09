@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import AuthContext from '../../auth/AuthContext'
 import NavbarItem from './NavbarItem'
 
 export const Navbar = () => {
+  const { user } = useContext(AuthContext)
+
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
       <div className="container-fluid">
@@ -28,6 +31,9 @@ export const Navbar = () => {
             <NavbarItem to="/search">Search</NavbarItem>
           </ul>
           <ul className="navbar-nav ms-auto">
+            <span className="nav-item nav-link text-muted fw-light">
+              {user.name}
+            </span>
             <NavbarItem to="/login">Logout</NavbarItem>
           </ul>
         </div>
