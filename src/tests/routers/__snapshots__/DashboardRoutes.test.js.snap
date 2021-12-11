@@ -77,12 +77,12 @@ Array [
           className="navbar-nav ms-auto"
         >
           <span
-            className="nav-item nav-link text-muted fw-light"
+            className="nav-item nav-link text-muted fw-light navbar__name"
           >
             John Doe
           </span>
           <button
-            className="nav-item nav-link btn"
+            className="nav-item nav-link btn navbar__logout"
             onClick={[Function]}
           >
             Logout
