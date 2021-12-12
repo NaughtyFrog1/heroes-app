@@ -38,10 +38,13 @@ export const Navbar = () => {
             <NavbarItem to="/search">Search</NavbarItem>
           </ul>
           <ul className="navbar-nav ms-auto">
-            <span className="nav-item nav-link text-muted fw-light">
+            <span className="nav-item nav-link text-muted fw-light navbar__name">
               {user.name}
             </span>
-            <button className="nav-item nav-link btn" onClick={handleClickLogout}>
+            <button
+              className="nav-item nav-link btn navbar__logout"
+              onClick={handleClickLogout}
+            >
               Logout
             </button>
           </ul>
