@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
+const heroImages = require.context('../../assets/heroes')
+
 const HeroCard = ({
   id,
   superhero,
@@ -15,7 +17,7 @@ const HeroCard = ({
       <div className="row g-0 h-100">
         <div className="col-md-4">
           <img
-            src={`./assets/heroes/${id}.jpg`}
+            src={heroImages(`./${id}.jpg`).default}
             style={{objectFit: 'cover', objectPosition: 'center center'}}
             className="card-img-top h-100"
             alt={superhero}
