@@ -2,6 +2,8 @@ import React, { useMemo } from 'react'
 import { Redirect, useParams } from 'react-router'
 import getHeroById from '../../helpers/getHeroById'
 
+const heroImages = require.context('../../assets/heroes')
+
 const HeroScreen = ({ history }) => {
   const handleReturn = () => {
     if (history.length <= 2) history.push('/')
@@ -20,7 +22,7 @@ const HeroScreen = ({ history }) => {
     <div className="row mt-5">
       <div className="col-4">
         <img
-          src={`../assets/heroes/${id}.jpg`}
+          src={heroImages(`./${id}.jpg`).default}
           alt={superhero}
           className="img-thumbnail"
         />
